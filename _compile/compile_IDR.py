@@ -59,4 +59,4 @@ if version:
         zip_file_name = f"{zip_file_name}{beta_appendix}"
 
 shutil.make_archive(os.path.join(release_directory, f"{zip_file_name}"), 'zip', mod_base_directory)
-print(f'Created {os.path.join(release_directory, f"{mod_name}.zip")}')
+print(f'Created {os.path.join(release_directory, f"{zip_file_name}.zip")}')
