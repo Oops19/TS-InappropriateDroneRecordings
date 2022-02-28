@@ -55,7 +55,7 @@ for folder in ['mod_data', 'mod_documentation']:
 zip_file_name = os.path.join(release_directory, f"{mod_name}")
 if version:
     zip_file_name = f"{zip_file_name}_v{version}"
-    if re.match(r"^[0-9]+\.[13579]+(?:\.[0-9]+)?$", version):
+    if re.match(r"^(?:0|(?:0|[1-9][0-9]*)\.[0-9]*[13579])(?:\.[0-9]+)*$", version):
         zip_file_name = f"{zip_file_name}{beta_appendix}"
 
 shutil.make_archive(os.path.join(release_directory, f"{zip_file_name}"), 'zip', mod_base_directory)
